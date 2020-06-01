@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jun  1 12:08:50 2020
-
-@author: ambresaintobert
-"""
-
 
 #UPLOAD IMAGE
 
@@ -15,11 +9,33 @@ from typing import Union
 
 #import pandas as pd
 import streamlit as st
+from PIL import Image
+
+st.title('FIND YOUR')
+image = Image.open('/Users/ambresaintobert/Downloads/Zara_logo.jpg')
+st.image(image, caption='',use_column_width=True)
+
 
 STYLE = """
 <style>
 img {
     max-width: 100%;
+}
+body {
+  background-color: white;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+.reportview-container h1 {
+    font-weight: 700;
+    font-size: 3.25rem;  
+    font-family: Stencil Std;
+}
+.alert-info{
+visibility: hidden;    
 }
 </style>
 """
@@ -54,11 +70,11 @@ def main():
     st.info(__doc__)
     st.markdown(STYLE, unsafe_allow_html=True)
 
-    file = st.file_uploader("Chargez l'image de votre vêtement", type=FILE_TYPE)
+    file = st.file_uploader("UPLOAD THE IMAGE TO BE ANALYZED (ONLY .JPG):", type=FILE_TYPE)
     show_file = st.empty()
-    if not file:
-        show_file.info("Please upload a file of type: " + ", ".join(FILE_TYPE))
-        return
+#    if not file:
+#        show_file.info("Please upload a file of type: " + ", ".join(FILE_TYPE))
+    return
 
     file_type = get_file_type(file)
     if file_type == FileType.IMAGE:
