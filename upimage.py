@@ -16,10 +16,12 @@ image = Image.open('/Users/ambresaintobert/Downloads/Zara_logo.jpg')
 st.image(image, caption='',use_column_width=True)
 
 
+
 STYLE = """
 <style>
 img {
     max-width: 100%;
+    margin-bottom:1.5rem;
 }
 body {
   background-color: white;
@@ -35,7 +37,7 @@ h1 {
     font-family: Stencil Std;
 }
 .alert-info{
-visibility: hidden;    
+display:none;    
 }
 </style>
 """
