@@ -36,3 +36,8 @@ il contient les attributs suivants :
  - dataset.hog_images : numpy array of shape (1307, 200,200)
   chaque ligne correspond  à une image  traitée avec les histogrammes des gradients orientés
  
+Pour charger le dataset dans un script python :
+import pickle
+with open('dataset_path', 'rb') as data:
+    dataset = pickle.load(data)  
+ 
