@@ -32,7 +32,7 @@ Il contient les attributs suivants :
  - dataset.target_name_code : dictionnaire
         Correspondance label code <-> classes ie. {0: 'jupe', 1: 'pantalon', 2: 'robe', 3: 't-shirt'}
        
- - dataset.target_name_list :  list des 4classes
+ - dataset.target_name_list :  liste des 4 classes
         [jupe','pantalon','robe','t-shirt']
  
  - dataset.hog_features : numpy array of shape (1307, 10368)
