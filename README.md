@@ -1,6 +1,6 @@
 # Projet_Classification_ZARA
 
-Le dataset ZARA_Dataset_models  est un object de type dictionnaire a été crée avec le jupyter notebook Image_treatment_and_dataset_creation.ipynb
+Le dataset ZARA_Dataset_models  est un object de type dictionnaire . Il a été crée avec le jupyter notebook Image_treatment_and_dataset_creation.ipynb
 
     =================   =====================================
     Classes              4 : jupe, pantalon, robe ou t-shirt
