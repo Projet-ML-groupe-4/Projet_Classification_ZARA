@@ -1,0 +1,12 @@
+numpy
+matplotlib
+seaborn
+pandas
+beautifulsoup4
+selenium 
+multiprocessing
+mahotas
+cv2
+pickle
+sklearn
+
