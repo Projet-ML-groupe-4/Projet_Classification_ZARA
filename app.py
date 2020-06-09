@@ -78,24 +78,24 @@ st.title("Clothing classification  :dress: :shirt: :jeans: ")
 st.write("This application perform the prediction of the type of a clothe from a picture ")
 
 
-
-def classifying():
-    ## upload clothe image 
+def uploading():
+ ## upload clothe image 
     uploaded_file = st.file_uploader("Upload your  image...",type=["png", "jpg", "jpeg"])
 
-    if uploaded_file is None:
-        img_array = None
+    while uploaded_file is None:
+        st.write()
 
-
+    
     if uploaded_file is not None:
         img= Image.open(uploaded_file)
         st.image(img, width=200)
-        #file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-        #opencv_image = cv2.imdecode(file_bytes, 1)
+    #file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
+    #opencv_image = cv2.imdecode(file_bytes, 1)
         img_array = np.array(img)
 
 
 
+def classifying():
 
     def traitement_image(img_array):
         fixed_size = tuple((56, 56))
@@ -191,5 +191,5 @@ def classifying():
     st.write(f" It is a {new_clothe_class}")
 
 
-
+uploading()
 classifying()
