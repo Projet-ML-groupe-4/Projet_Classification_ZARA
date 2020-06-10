@@ -181,8 +181,8 @@ if __name__ == '__main__':
     start = time.perf_counter()
     pantalons_s()
     robes_s()
-    jupes_s
-    tshirts_s
+    jupes_s()
+    tshirts_s()
     p1 = multiprocessing.Process(target=pantalons_s)
     p2 = multiprocessing.Process(target=robes_s)
     p3 = multiprocessing.process(target=jupes_s)
@@ -190,7 +190,11 @@ if __name__ == '__main__':
 
     p1.start()
     p2.start()
+    p3.start()
+    p4.start()
  
+    p1.join()
+    p2.join()
     p3.join()
     p4.join()
     finish = time.perf_counter()
